@@ -96,6 +96,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D6C3053629AD0C4D0052305A /* StatusManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusManager.h; sourceTree = "<group>"; };
+		D6C3053729AD0C4D0052305A /* StatusSetter16.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusSetter16.h; sourceTree = "<group>"; };
+		D6C3053829AD0C4D0052305A /* StatusSetter16_1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusSetter16_1.m; sourceTree = "<group>"; };
+		D6C3053929AD0C4D0052305A /* StatusSetter14.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusSetter14.m; sourceTree = "<group>"; };
+		D6C3053A29AD0C4D0052305A /* StatusSetter15.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusSetter15.h; sourceTree = "<group>"; };
+		D6C3053B29AD0C4D0052305A /* StatusSetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusSetter.h; sourceTree = "<group>"; };
+		D6C3053C29AD0C4D0052305A /* StatusSetter16_1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusSetter16_1.h; sourceTree = "<group>"; };
+		D6C3053D29AD0C4D0052305A /* StatusSetter14.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusSetter14.h; sourceTree = "<group>"; };
+		D6C3053E29AD0C4D0052305A /* StatusSetter16.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusSetter16.m; sourceTree = "<group>"; };
+		D6C3053F29AD0C4D0052305A /* StatusManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusManager.m; sourceTree = "<group>"; };
+		D6C3054029AD0C4D0052305A /* StatusSetter15.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusSetter15.m; sourceTree = "<group>"; };
 		F1100318297AC10F00C7AA2D /* libwoff2common.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwoff2common.a; sourceTree = SOURCE_ROOT; };
 		F1100319297AC10F00C7AA2D /* libwoff2enc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwoff2enc.a; sourceTree = SOURCE_ROOT; };
 		F110031C297AC11500C7AA2D /* libwoff2enc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwoff2enc.a; sourceTree = SOURCE_ROOT; };
@@ -221,6 +232,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D6C3053529AD0C4D0052305A /* StatusManager */ = {
+			isa = PBXGroup;
+			children = (
+				D6C3053629AD0C4D0052305A /* StatusManager.h */,
+				D6C3053729AD0C4D0052305A /* StatusSetter16.h */,
+				D6C3053829AD0C4D0052305A /* StatusSetter16_1.m */,
+				D6C3053929AD0C4D0052305A /* StatusSetter14.m */,
+				D6C3053A29AD0C4D0052305A /* StatusSetter15.h */,
+				D6C3053B29AD0C4D0052305A /* StatusSetter.h */,
+				D6C3053C29AD0C4D0052305A /* StatusSetter16_1.h */,
+				D6C3053D29AD0C4D0052305A /* StatusSetter14.h */,
+				D6C3053E29AD0C4D0052305A /* StatusSetter16.m */,
+				D6C3053F29AD0C4D0052305A /* StatusManager.m */,
+				D6C3054029AD0C4D0052305A /* StatusSetter15.m */,
+			);
+			path = StatusManager;
+			sourceTree = "<group>";
+		};
 		F14C0E0C29857BB400882940 /* GetSandbox */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				F1F4F6ED296A4BFC0024218E /* TrollBox-Bridging-Header.h */,
+				D6C3053529AD0C4D0052305A /* StatusManager */,
 				F1F4F6DC296A4A5D0024218E /* TrollBox */,
 				F1F4F6DB296A4A5D0024218E /* Products */,
 				F8D0EFB229AC0CBF00362246 /* Frameworks */,
@@ -845,7 +875,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrollBox/Preview Content\"";
-				DEVELOPMENT_TEAM = VHH9J34ZAY;
+				DEVELOPMENT_TEAM = 8JKVMYCRTJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrollBox/Info.plist;
@@ -871,7 +901,7 @@
 					"$(PROJECT_DIR)",
 				);
 				MARKETING_VERSION = 0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = live.cclerc.trollbox;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.bomberfish.trollbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "TrollBox-Bridging-Header.h";
@@ -890,7 +920,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrollBox/Preview Content\"";
-				DEVELOPMENT_TEAM = VHH9J34ZAY;
+				DEVELOPMENT_TEAM = 8JKVMYCRTJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrollBox/Info.plist;
@@ -917,7 +947,7 @@
 				);
 				MARKETING_VERSION = 0.2;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = live.cclerc.trollbox;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.bomberfish.trollbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "TrollBox-Bridging-Header.h";

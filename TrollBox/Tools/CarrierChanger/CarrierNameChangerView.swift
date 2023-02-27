@@ -37,6 +37,17 @@ struct CarrierNameChangerView: View {
                             .offset(x: carrierOffset[0], y: carrierOffset[1])
                             .frame(width: carrierBoxSize[0], height: carrierBoxSize[1], alignment: .center)
                             .multilineTextAlignment(.leading)
+                            .onChange(of: currentcarrier, perform: { nv in
+                                // This is important.
+                                // Make sure the UTF-8 representation of the string does not exceed 100
+                                // Otherwise the struct will overflow
+                                var safeNv = nv
+                                while safeNv.utf8CString.count > 100 {
+                                    safeNv = String(safeNv.prefix(safeNv.count - 1))
+                                }
+                                currentcarrier = safeNv
+                                StatusManager.sharedInstance().setCarrier(safeNv)
+                            })
                         
                     }
                 }
@@ -45,19 +56,25 @@ struct CarrierNameChangerView: View {
                 
                 Button("Apply") {
                     do {
-                        try StatusManager.sharedInstance().setCarrier(currentText)
-                        UIApplication.shared.alert(title: "Success!", body: "Please respring your device for the changes to take effect.")
-                    } catch {
-                        UIApplication.shared.alert(body: error.localizedDescription)
+                        StatusManager.sharedInstance().setCarrier(currentcarrier)
+                        if fm.fileExists(atPath: "/var/mobile/Library/SpringBoard/statusBarOverridesEditing") {
+                            do {
+                                _ = try fm.replaceItemAt(URL(fileURLWithPath: "/var/mobile/Library/SpringBoard/statusBarOverrides"), withItemAt: URL(fileURLWithPath: "/var/mobile/Library/SpringBoard/statusBarOverridesEditing"))
+                                UIApplication.shared.alert(title: "Success!", body: "Please respring your device for the changes to take effect.")
+                            } catch {
+                                UIApplication.shared.alert(body: "\(error)")
+                            }
+                            
+                        }
                     }
                 }
+                .ignoresSafeArea(.keyboard)
+                .frame(maxWidth: .infinity)
             }
-            .ignoresSafeArea(.keyboard)
-            .frame(maxWidth: .infinity)
         }
     }
+    
 }
-        
         struct CarrierNameChangerView_Previews: PreviewProvider {
             static var previews: some View {
                 CarrierNameChangerView()
